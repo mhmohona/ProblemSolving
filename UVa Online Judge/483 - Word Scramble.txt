@@ -1,0 +1,49 @@
+	#include <bits/stdc++.h>
+	using namespace std;
+	
+	void word_reverse(int start, int end);
+	char str[300];
+	
+	
+	int main() {
+		// your code goes here
+		int s = 0, i=0;
+	
+	       char c;
+	        while (scanf("%c", &c) == 1) {
+	
+	              str[i]= c;
+	               if (str[i] == ' '){
+	
+	                     word_reverse(s, i-1);
+	
+	                     printf(" ");
+	
+	                     s = i;
+	                    }
+	                    else if(str[i] =='\n'){
+	
+	                     word_reverse(s, i-1);
+	
+	                     printf("\n");
+	
+	                     i=0;s=0;
+	                    }
+	         else  
+	         i++;
+	        }     
+	         word_reverse(s, i-1);
+	       return 0;
+	
+	}   
+	
+	  void word_reverse(int start, int end){
+	 char  c;
+	 for (int i = end; i >= start; i--){
+	  printf("%c",str[i]);
+	
+	       }
+	
+	 
+	
+	}

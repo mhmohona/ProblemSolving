@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+ char s[16];
+    int no=0;
+    while(scanf("%s",s))
+    {
+        if(!strcmp(s,"#"))
+        break;
+        else if(!strcmp(s,"HELLO"))
+        printf("Case %d: ENGLISH\n",++no);
+        else if(!strcmp(s,"HOLA"))
+        printf("Case %d: SPANISH\n",++no);
+        else if(!strcmp(s,"HALLO"))
+        printf("Case %d: GERMAN\n",++no);
+        else if(!strcmp(s,"BONJOUR"))
+        printf("Case %d: FRENCH\n",++no);
+        else if(!strcmp(s,"CIAO"))
+        printf("Case %d: ITALIAN\n",++no);
+          else if(!strcmp(s,"ZDRAVSTVUJTE"))
+        printf("Case %d: RUSSIAN\n",++no);
+        else
+        printf("Case %d: UNKNOWN\n",++no);
+    }
+    return 0;
+}

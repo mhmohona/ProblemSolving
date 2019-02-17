@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+long int n,a[55],x,c,i,j,t;
+
+scanf("%ld",&n);
+
+while (n--){
+
+scanf("%ld",&x);
+for (i=1; i<=x; i++)
+scanf("%ld",&a[i]);
+
+c=0;
+for (i=1; i<=x; i++)
+for (j=i+1; j<=x; j++)
+if (a[i]>a[j]){
+t=a [i];
+a[i]=a[j];
+a[j]=t;
+c++;
+}
+
+printf("Optimal train swapping takes %ld swaps.\n", c);
+}
+return 0;
+}

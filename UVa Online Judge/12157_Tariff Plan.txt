@@ -1,0 +1,51 @@
+#include <bits/stdc++.h>
+    using namespace std;
+    
+    	// your code goes here
+  int Mile(int t){
+    int p=0;
+ 
+    while(t>=0){
+        t = t-30;
+        p=p+10;
+    }
+    return p;
+ 
+}
+ 
+int Juice(int t){
+ 
+    int p=0;
+ 
+    while(t>=0){
+        t = t-60;
+        p=p+15;
+    }
+    return p;
+}
+ 
+int main()
+{
+    int caseCount,i,callCount,j,callDuration,callCostMile,callCostJuice;
+    scanf("%d",&caseCount);
+ 
+    for(i=0;i<caseCount;i++){
+        scanf("%d",&callCount);
+        callCostJuice = 0;
+        callCostMile = 0;
+        for(j=0;j<callCount;j++){
+            scanf("%d",&callDuration);
+            callCostMile = callCostMile + Mile(callDuration);
+            callCostJuice = callCostJuice + Juice(callDuration);
+        }
+ 
+        if(callCostMile>callCostJuice){
+            printf("Case %d: Juice %d\n",i+1,callCostJuice);
+        }else if(callCostMile<callCostJuice){
+            printf("Case %d: Mile %d\n",i+1,callCostMile);
+        }else{
+            printf("Case %d: Mile Juice %d\n",i+1,callCostJuice);
+        }
+    }
+    return 0;
+}
